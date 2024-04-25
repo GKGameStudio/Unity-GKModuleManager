@@ -1,0 +1,3 @@
+[submodule "Unity-HealthModule"]
+	path = Assets/Modules/Unity-HealthModule
+	url = https://github.com/GKGameStudio/Unity-HealthModule.git

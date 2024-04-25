@@ -59,7 +59,7 @@ def onerror(func, path, exc_info):
                     continue
             else:
                 print(f"Failed to delete: {path}. File may be locked by another process.")
-def remove_submodule_directory(repo, module):
+def remove_submodule(repo, module):
     # Path in the working directory
     submodule_dir = os.path.join(repo.working_tree_dir, module["recommendedPath"])
     if os.path.exists(submodule_dir):
@@ -99,10 +99,10 @@ def handle_action(module, action, repo):
             done_event = threading.Event()
             progress_thread = threading.Thread(target=slow_progress, args=(pbar, 1.0, done_event))
             progress_thread.start()
-            remove_submodule_directory(repo, module)
+            remove_submodule(repo, module)
             try:
                 repo.git.execute(
-                        ['git', 'submodule', 'add', "--name ", module["moduleName"], "-f", module['gitUrl'], module['recommendedPath']],
+                        ['git', 'submodule', 'add', "--name", module["moduleName"], "-f", module['gitUrl'], module['recommendedPath']],
                 )
             finally:
                 done_event.set()
