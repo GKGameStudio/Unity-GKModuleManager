@@ -1,6 +1,3 @@
-[submodule "SkillAPIModule"]
-	url = https://github.com/GKGameStudio/Unity-SkillAPIModule.git
-	path = Assets/Modules/Unity-SkillAPIModule
-[submodule "Unity-HealthModule"]
-	url = https://github.com/GKGameStudio/Unity-HealthModule.git
+[submodule "Assets/Modules/Unity-HealthModule"]
 	path = Assets/Modules/Unity-HealthModule
+	url = https://github.com/GKGameStudio/Unity-HealthModule.git

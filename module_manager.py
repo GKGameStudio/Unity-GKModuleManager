@@ -26,15 +26,9 @@ def display_modules(all_modules, installed_modules):
     choices = []
     for module in all_modules:
         submodule = installed_modules.get(module['moduleName'], None)
+        print(submodule)
         if submodule and submodule.url == module['gitUrl']:
-            try:
-                # submodule.update()
-                if submodule.hexsha != submodule.module().commit("HEAD").hexsha:
-                    status = "🔄"  # Update available
-                else:
-                    status = "✔️"  # Up-to-date
-            except GitCommandError:
-                status = "🔄"  # Assuming update needed if command fails
+            status = "✔️"  # Up-to-date
         else:
             status = ""
         choice_label = f"{module['moduleName']} {status}"
@@ -76,6 +70,14 @@ def remove_submodule_directory(repo, module):
     if os.path.exists(git_modules_dir):
         shutil.rmtree(git_modules_dir, onerror=onerror)
 
+    
+    try:
+        repo.git.execute(
+                ['git', 'rm', '--cached', module['recommendedPath']],
+        )
+    except:
+        pass
+
     print(f"Removed directories: {submodule_dir} and {git_modules_dir}")
 
 
@@ -97,10 +99,11 @@ def handle_action(module, action, repo):
             done_event = threading.Event()
             progress_thread = threading.Thread(target=slow_progress, args=(pbar, 1.0, done_event))
             progress_thread.start()
-
+            remove_submodule_directory(repo, module)
             try:
-                remove_submodule_directory(repo, module)
-                repo.create_submodule(module['moduleName'], module['recommendedPath'], url=module['gitUrl'])
+                repo.git.execute(
+                        ['git', 'submodule', 'add', "--name ", module["moduleName"], "-f", module['gitUrl'], module['recommendedPath']],
+                )
             finally:
                 done_event.set()
                 pbar.update(pbar.total - pbar.n)
@@ -116,7 +119,6 @@ def handle_action(module, action, repo):
                 try:
                     repo.git.execute(
                         ['git', 'submodule', 'update', '--remote', '--', submodule.path],
-                        progress_func=lambda x: None  # You might need to adjust or remove this if it interferes with tqdm
                     )
                 finally:
                     done_event.set()
