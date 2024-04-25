@@ -28,17 +28,12 @@ def display_modules(all_modules, installed_modules):
         submodule = installed_modules.get(module['moduleName'], None)
         print(submodule)
         if submodule and submodule.url == module['gitUrl']:
-            status = "✔️"  # Up-to-date
+            status = "[Added]"  # Up-to-date
         else:
             status = ""
         choice_label = f"{module['moduleName']} {status}"
         choices.append((choice_label, module))
     return choices
-
-def real_time_progress(op_code, cur_count, max_count=None, message=''):
-    if max_count:
-        progress.update(min(cur_count, max_count))
-
 
 def onerror(func, path, exc_info):
     import stat
@@ -99,13 +94,14 @@ def handle_action(module, action, repo):
             done_event = threading.Event()
             progress_thread = threading.Thread(target=slow_progress, args=(pbar, 1.0, done_event))
             progress_thread.start()
-            remove_submodule(repo, module)
             try:
+                remove_submodule(repo, module)
                 repo.git.execute(
                         ['git', 'submodule', 'add', "--name", module["moduleName"], "-f", module['gitUrl'], module['recommendedPath']],
                 )
             finally:
                 done_event.set()
+                progress_thread.join()
                 pbar.update(pbar.total - pbar.n)
         print("Installation completed.")
     elif action == 'pull':
@@ -122,6 +118,7 @@ def handle_action(module, action, repo):
                     )
                 finally:
                     done_event.set()
+                    progress_thread.join()
                     pbar.update(100 - pbar.n)
             print("Update completed.")
         else:
@@ -146,9 +143,12 @@ def handle_action(module, action, repo):
                     gitmodules_path = os.path.join(repo.working_tree_dir, '.gitmodules')
                     if os.path.exists(gitmodules_path):
                         repo.git.config('--file', gitmodules_path, '--remove-section', f'submodule.{submodule.name}')
-                        if os.stat(gitmodules_path).st_size == 0:
-                            os.remove(gitmodules_path)
+
+                    
                     remove_submodule(repo, module)
+
+                    #stage the changes to .gitmodules and the submodule path
+                    repo.git.add('.gitmodules')
 
                 finally:
                     # Ensure the progress bar completes and the thread is cleaned up properly
@@ -159,27 +159,27 @@ def handle_action(module, action, repo):
                 print("Uninstallation completed.")
         else:
             print(f"Error: Submodule {module['moduleName']} not found.")
+
 def main():
-    repo_path = sys.argv[1]
+    repo_path = "."
     modules_url = 'https://raw.githubusercontent.com/GKGameStudio/Unity-GKModuleManager/main/modules.json'
 
     try:
         repo = Repo(repo_path)
     except InvalidGitRepositoryError:
-        print("Invalid Git repository.")
+        print("Invalid Git repository. Please place this exe in the root of a git repository. (same level as .git folder)")
+        #wait for user input before exiting
+        input("Press Enter to exit...")
         sys.exit(1)
 
+    try:
+        modules = load_modules_from_url(modules_url)
+    except requests.HTTPError as e:
+        print(f"Failed to load modules from URL: {e}")
+        sys.exit(1)
     while True:
-        try:
-            modules = load_modules_from_url(modules_url)
-        except requests.HTTPError as e:
-            print(f"Failed to load modules from URL: {e}")
-            sys.exit(1)
-
         installed_modules = get_installed_modules(repo)
         choices = display_modules(modules, installed_modules)
-        #add a "reload" option to the choices
-        choices.append(('Reload modules', 'reload'))
 
         questions = [inquirer.List('module', message="Choose a module", choices=choices)]
         answers = inquirer.prompt(questions)
@@ -187,16 +187,19 @@ def main():
             print("No module selected. Exiting.")
             break
         selected_module = answers['module']  # Adjust based on how you structure the choice tuple
-        if(selected_module != 'reload'):
-            installed = selected_module['gitUrl'] in [m.url for m in installed_modules.values()]
-            actions = [('Pull updates', 'pull'), ('Uninstall', 'uninstall')] if installed else [('Install', 'install')]
-            action_question = [inquirer.List('action', message="Choose an action", choices=actions)]
-            action_answer = inquirer.prompt(action_question)
-            if not action_answer:
-                print("No action selected. Exiting.")
-                break
+        installed = selected_module['gitUrl'] in [m.url for m in installed_modules.values()]
+        actions = [('Pull updates', 'pull'), ('Uninstall', 'uninstall')] if installed else [('Install', 'install')]
+        actions.append(('Cancel', 'cancel'))
+        action_question = [inquirer.List('action', message="Choose an action", choices=actions)]
+        action_answer = inquirer.prompt(action_question)
+        if not action_answer:
+            print("No action selected. Exiting.")
+            continue
+        if action_answer['action'] == 'cancel':
+            print("Action cancelled.")
+            continue
 
-            handle_action(selected_module, action_answer['action'], repo)
-
+        handle_action(selected_module, action_answer['action'], repo)
+    input("Press Enter to exit...")
 if __name__ == '__main__':
     main()
