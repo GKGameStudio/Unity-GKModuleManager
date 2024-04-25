@@ -1,6 +1,11 @@
 [
     {
-        "moduleName": "SkillAPIModule",
+        "moduleName": "Unity-GKCore",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-GKCore.git",
+        "recommendedPath": "Assets/Modules/Unity-GKCore"
+    },
+    {
+        "moduleName": "Unity-SkillAPIModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillAPIModule.git",
         "recommendedPath": "Assets/Modules/Unity-SkillAPIModule"
     },
