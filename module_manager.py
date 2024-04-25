@@ -147,8 +147,6 @@ def handle_action(module, action, repo):
                         if os.stat(gitmodules_path).st_size == 0:
                             os.remove(gitmodules_path)
 
-                    # Commit the changes
-                    repo.index.commit(f'Removed submodule {submodule.name}')
                 finally:
                     # Ensure the progress bar completes and the thread is cleaned up properly
                     done_event.set()
@@ -177,6 +175,8 @@ def main():
 
         installed_modules = get_installed_modules(repo)
         choices = display_modules(modules, installed_modules)
+        #add a "reload" option to the choices
+        choices.append(('Reload modules', 'reload'))
 
         questions = [inquirer.List('module', message="Choose a module", choices=choices)]
         answers = inquirer.prompt(questions)
@@ -184,15 +184,16 @@ def main():
             print("No module selected. Exiting.")
             break
         selected_module = answers['module']  # Adjust based on how you structure the choice tuple
-        installed = selected_module['gitUrl'] in [m.url for m in installed_modules.values()]
-        actions = [('Pull updates', 'pull'), ('Uninstall', 'uninstall')] if installed else [('Install', 'install')]
-        action_question = [inquirer.List('action', message="Choose an action", choices=actions)]
-        action_answer = inquirer.prompt(action_question)
-        if not action_answer:
-            print("No action selected. Exiting.")
-            break
+        if(selected_module != 'reload'):
+            installed = selected_module['gitUrl'] in [m.url for m in installed_modules.values()]
+            actions = [('Pull updates', 'pull'), ('Uninstall', 'uninstall')] if installed else [('Install', 'install')]
+            action_question = [inquirer.List('action', message="Choose an action", choices=actions)]
+            action_answer = inquirer.prompt(action_question)
+            if not action_answer:
+                print("No action selected. Exiting.")
+                break
 
-        handle_action(selected_module, action_answer['action'], repo)
+            handle_action(selected_module, action_answer['action'], repo)
 
 if __name__ == '__main__':
     main()

@@ -8,6 +8,15 @@
         "moduleName": "Unity-HealthModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-HealthModule.git",
         "recommendedPath": "Assets/Modules/Unity-HealthModule"
+    },
+    {
+        "moduleName": "Unity-FeedbackModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-FeedbackModule.git",
+        "recommendedPath": "Assets/Modules/Unity-FeedbackModule"
+    },
+    {
+        "moduleName": "Unity-2DRagdollControlModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-2DRagdollControlModule.git",
+        "recommendedPath": "Assets/Modules/Unity-2DRagdollControlModule"
     }
-    
 ]
