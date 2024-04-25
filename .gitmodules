@@ -4,6 +4,6 @@
 [submodule "Unity-HealthModule"]
 	url = https://github.com/GKGameStudio/Unity-HealthModule.git
 	path = Assets/Modules/Unity-HealthModule
-[submodule "Unity-FeedbackModule"]
-	url = https://github.com/GKGameStudio/Unity-FeedbackModule.git
-	path = Assets/Modules/Unity-FeedbackModule
+[submodule "Unity-2DRagdollControlModule"]
+	url = https://github.com/GKGameStudio/Unity-2DRagdollControlModule.git
+	path = Assets/Modules/Unity-2DRagdollControlModule
