@@ -5,9 +5,9 @@
         "recommendedPath": "Assets/Modules/Unity-GKCore"
     },
     {
-        "moduleName": "Unity-URPCameraFilterModule",
-        "gitUrl": "https://github.com/GKGameStudio/Unity-URPCameraFilterModule.git",
-        "recommendedPath": "Assets/Modules/Unity-URPCameraFilterModule"
+        "moduleName": "Unity-CameraFilterModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-CameraFilterModule.git",
+        "recommendedPath": "Assets/Modules/Unity-CameraFilterModule"
     },
     {
         "moduleName": "Unity-SkillAPIModule",
