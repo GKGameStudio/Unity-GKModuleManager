@@ -20,6 +20,11 @@
         "recommendedPath": "Assets/Modules/Unity-HealthModule"
     },
     {
+        "moduleName": "Unity-ManaModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-ManaModule.git",
+        "recommendedPath": "Assets/Modules/Unity-ManaModule"
+    },
+    {
         "moduleName": "Unity-FeedbackModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-FeedbackModule.git",
         "recommendedPath": "Assets/Modules/Unity-FeedbackModule"
