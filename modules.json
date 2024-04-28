@@ -30,6 +30,11 @@
         "recommendedPath": "Assets/Modules/Unity-FeedbackModule"
     },
     {
+        "moduleName": "Unity-HitEffectModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-HitEffectModule.git",
+        "recommendedPath": "Assets/Modules/Unity-HitEffectModule"
+    },
+    {
         "moduleName": "Unity-CardInHandModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-CardInHandModule.git",
         "recommendedPath": "Assets/Modules/Unity-CardInHandModule"
