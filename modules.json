@@ -35,6 +35,11 @@
         "recommendedPath": "Assets/Modules/Unity-HitEffectModule"
     },
     {
+        "moduleName": "Unity-SteamMapModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-SteamMapModule.git",
+        "recommendedPath": "Assets/Modules/Unity-SteamMapModule"
+    },
+    {
         "moduleName": "Unity-CardInHandModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-CardInHandModule.git",
         "recommendedPath": "Assets/Modules/Unity-CardInHandModule"
