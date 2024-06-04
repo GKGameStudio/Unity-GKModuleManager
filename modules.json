@@ -10,6 +10,11 @@
         "recommendedPath": "Assets/Modules/Unity-CameraFilterModule"
     },
     {
+        "moduleName": "Unity-CameraControlModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-CameraControlModule.git",
+        "recommendedPath": "Assets/Modules/Unity-CameraControlModule"
+    },
+    {
         "moduleName": "Unity-SkillAPIModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillAPIModule.git",
         "recommendedPath": "Assets/Modules/Unity-SkillAPIModule"
