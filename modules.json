@@ -15,6 +15,11 @@
         "recommendedPath": "Assets/Modules/Unity-CameraControlModule"
     },
     {
+        "moduleName": "Unity-RigidbodyControlModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-RigidbodyControlModule.git",
+        "recommendedPath": "Assets/Modules/Unity-RigidbodyControlModule"
+    },
+    {
         "moduleName": "Unity-SkillAPIModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillAPIModule.git",
         "recommendedPath": "Assets/Modules/Unity-SkillAPIModule"
