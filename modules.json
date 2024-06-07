@@ -50,6 +50,11 @@
         "recommendedPath": "Assets/Modules/Unity-SteamMapModule"
     },
     {
+        "moduleName": "Unity-GridSystem",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-GridSystem.git",
+        "recommendedPath": "Assets/Modules/Unity-GridSystem"
+    },
+    {
         "moduleName": "Unity-CardInHandModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-CardInHandModule.git",
         "recommendedPath": "Assets/Modules/Unity-CardInHandModule"
