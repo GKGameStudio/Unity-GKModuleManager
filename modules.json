@@ -25,6 +25,11 @@
         "recommendedPath": "Assets/Modules/Unity-SkillAPIModule"
     },
     {
+        "moduleName": "Unity-SkillModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-SkillModule.git",
+        "recommendedPath": "Assets/Modules/Unity-SkillModule"
+    },
+    {
         "moduleName": "Unity-SpawnerModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SpawnerModule.git",
         "recommendedPath": "Assets/Modules/Unity-SpawnerModule"
