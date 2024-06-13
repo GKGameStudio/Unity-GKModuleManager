@@ -73,5 +73,10 @@
         "moduleName": "Unity-2DRagdollControlModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-2DRagdollControlModule.git",
         "recommendedPath": "Assets/Modules/Unity-2DRagdollControlModule"
+    },
+    {
+        "moduleName": "Unity-ObjectSelectionModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-ObjectSelectionModule.git",
+        "recommendedPath": "Assets/Modules/Unity-ObjectSelectionModule"
     }
 ]
