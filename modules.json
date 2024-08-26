@@ -81,7 +81,7 @@
     },
     {
         "moduleName": "Unity-MobileService",
-        "gitUrl": "https://github.com/GKGameStudio/Unity-MobileCloudSaving",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-MobileService",
         "recommendedPath": "Assets/Modules/Unity-MobileService"
     }
 ]
