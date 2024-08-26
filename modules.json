@@ -78,5 +78,10 @@
         "moduleName": "Unity-ObjectSelectionModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-ObjectSelectionModule.git",
         "recommendedPath": "Assets/Modules/Unity-ObjectSelectionModule"
+    },
+    {
+        "moduleName": "Unity-MobileCloudSaving",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-MobileCloudSaving",
+        "recommendedPath": "Assets/Modules/Unity-MobileCloudSaving"
     }
 ]
