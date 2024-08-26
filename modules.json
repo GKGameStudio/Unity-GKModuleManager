@@ -80,8 +80,8 @@
         "recommendedPath": "Assets/Modules/Unity-ObjectSelectionModule"
     },
     {
-        "moduleName": "Unity-MobileCloudSaving",
+        "moduleName": "Unity-MobileService",
         "gitUrl": "https://github.com/GKGameStudio/Unity-MobileCloudSaving",
-        "recommendedPath": "Assets/Modules/Unity-MobileCloudSaving"
+        "recommendedPath": "Assets/Modules/Unity-MobileService"
     }
 ]
