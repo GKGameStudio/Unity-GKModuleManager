@@ -10,6 +10,31 @@
         "recommendedPath": "Assets/Modules/Unity-GKCore-2.0"
     },
     {
+        "moduleName": "Unity-GKEvent",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-GKEvent",
+        "recommendedPath": "Assets/Modules/Unity-GKEvent"
+    },
+    {
+        "moduleName": "Unity-Observer",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-Observer",
+        "recommendedPath": "Assets/Modules/Unity-Observer"
+    },
+    {
+        "moduleName": "Unity-Randomizer",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-Randomizer",
+        "recommendedPath": "Assets/Modules/Unity-Randomizer"
+    },
+    {
+        "moduleName": "Unity-V-Owner",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-V-Owner",
+        "recommendedPath": "Assets/Modules/Unity-V-Owner"
+    },
+    {
+        "moduleName": "Unity-Entangle",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-Entangle",
+        "recommendedPath": "Assets/Modules/Unity-Entangle"
+    },
+    {
         "moduleName": "Unity-CameraFilterModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-CameraFilterModule.git",
         "recommendedPath": "Assets/Modules/Unity-CameraFilterModule"
