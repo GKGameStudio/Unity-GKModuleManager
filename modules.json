@@ -62,7 +62,7 @@
     {
         "moduleName": "Unity-SpawnerModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SpawnerModule.git",
-        "recommendedPath": "Assets/Modules/Unity-SpawnerModule"
+        "recommendedPath": "Assets/Plugins/GKStudio/Advancd Spawner"
     },
     {
         "moduleName": "Unity-HealthModule",
