@@ -20,6 +20,11 @@
         "recommendedPath": "Assets/Plugins/GKStudio/Observer Pattern"
     },
     {
+        "moduleName": "Unity-SpawnerModule",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-SpawnerModule.git",
+        "recommendedPath": "Assets/Plugins/GKStudio/G-Spawner"
+    },
+    {
         "moduleName": "Unity-Randomizer",
         "gitUrl": "https://github.com/GKGameStudio/Unity-Randomizer",
         "recommendedPath": "Assets/Plugins/GKStudio/GKRandomizer"
@@ -58,11 +63,6 @@
         "moduleName": "Unity-SkillModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillModule.git",
         "recommendedPath": "Assets/Modules/Unity-SkillModule"
-    },
-    {
-        "moduleName": "Unity-SpawnerModule",
-        "gitUrl": "https://github.com/GKGameStudio/Unity-SpawnerModule.git",
-        "recommendedPath": "Assets/Plugins/GKStudio/Advancd Spawner"
     },
     {
         "moduleName": "Unity-HealthModule",
