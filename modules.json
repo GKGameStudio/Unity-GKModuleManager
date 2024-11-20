@@ -20,6 +20,11 @@
         "recommendedPath": "Assets/Plugins/GKStudio/Observer Pattern"
     },
     {
+        "moduleName": "Muse-UI",
+        "gitUrl": "https://github.com/GKGameStudio/Muse-UI",
+        "recommendedPath": "Assets/Plugins/GKStudio/Muse UI"
+    },
+    {
         "moduleName": "Unity-SpawnerModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SpawnerModule.git",
         "recommendedPath": "Assets/Plugins/GKStudio/G-Spawner"
