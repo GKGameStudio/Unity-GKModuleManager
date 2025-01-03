@@ -10,9 +10,9 @@
         "recommendedPath": "Assets/Modules/Unity-GKCore-2.0"
     },
     {
-        "moduleName": "Steam-Engine",
+        "moduleName": "Unity-SteamEngine",
         "gitUrl": "https://github.com/GKGameStudio/SteamEngine.git",
-        "recommendedPath": "Assets/Modules/Steam Engine"
+        "recommendedPath": "Assets/Plugins/GKStudio/Steam Engine"
     },
     {
         "moduleName": "Unity-GKEvent",
