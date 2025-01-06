@@ -35,6 +35,11 @@
         "recommendedPath": "Assets/Plugins/GKStudio/G-Spawner"
     },
     {
+        "moduleName": "Unity-PhysicsBasedDamageSystem",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-PhysicBasedDamageSystem",
+        "recommendedPath": "Assets/Plugins/GKStudio/Physics Based Damage System"
+    },
+    {
         "moduleName": "Unity-Randomizer",
         "gitUrl": "https://github.com/GKGameStudio/Unity-Randomizer",
         "recommendedPath": "Assets/Plugins/GKStudio/GKRandomizer"
