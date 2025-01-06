@@ -1,6 +1,6 @@
 [
     {
-        "moduleName": "Unity-GKCore",
+        "moduleName": "Unity-GKCore (Obsoleted)",
         "gitUrl": "https://github.com/GKGameStudio/Unity-GKCore.git",
         "recommendedPath": "Assets/Modules/Unity-GKCore"
     },
@@ -8,6 +8,11 @@
         "moduleName": "Unity-GKCore-2.0",
         "gitUrl": "https://github.com/GKGameStudio/Unity-GKCore-2.0.git",
         "recommendedPath": "Assets/Modules/Unity-GKCore-2.0"
+    },
+    {
+        "moduleName": "Unity-SkillAPI",
+        "gitUrl": "https://github.com/GKGameStudio/Unity-SkillAPI",
+        "recommendedPath": "Assets/Plugins/GKStudio/Skill API"
     },
     {
         "moduleName": "Unity-SteamEngine",
@@ -70,12 +75,12 @@
         "recommendedPath": "Assets/Modules/Unity-RigidbodyControlModule"
     },
     {
-        "moduleName": "Unity-SkillAPIModule",
+        "moduleName": "Unity-SkillAPIModule (Obsoleted)",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillAPIModule.git",
         "recommendedPath": "Assets/Modules/Unity-SkillAPIModule"
     },
     {
-        "moduleName": "Unity-SkillModule",
+        "moduleName": "Unity-SkillModule (Obsoleted)",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillModule.git",
         "recommendedPath": "Assets/Modules/Unity-SkillModule"
     },
