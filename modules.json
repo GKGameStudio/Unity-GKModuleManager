@@ -10,6 +10,11 @@
         "recommendedPath": "Assets/Modules/Unity-GKCore-2.0"
     },
     {
+        "moduleName": "Unity-OdinInspector",
+        "gitUrl": "https://github.com/GKGameStudio/Odin-Inspector.git",
+        "recommendedPath": "Assets/Modules/Unity-OdinInspector"
+    },
+    {
         "moduleName": "Unity-SkillAPI",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SkillAPI",
         "recommendedPath": "Assets/Plugins/GKStudio/Skill API"
