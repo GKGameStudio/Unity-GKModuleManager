@@ -40,6 +40,11 @@
         "recommendedPath": "Assets/Plugins/GamiFly/Muse UI"
     },
     {
+        "moduleName": "UIAnimator",
+        "gitUrl": "https://github.com/GKGameStudio/UIAnimator",
+        "recommendedPath": "Assets/Plugins/Zova Studio/UIAnimator"
+    },
+    {
         "moduleName": "Unity-SpawnerModule",
         "gitUrl": "https://github.com/GKGameStudio/Unity-SpawnerModule.git",
         "recommendedPath": "Assets/Plugins/GamiFly/G-Spawner"
