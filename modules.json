@@ -42,7 +42,7 @@
     {
         "moduleName": "UIAnimator",
         "gitUrl": "https://github.com/GKGameStudio/UIAnimator",
-        "recommendedPath": "Assets/Plugins/Zova Studio/UIAnimator"
+        "recommendedPath": "Assets/Plugins/GamiFly/UIAnimator"
     },
     {
         "moduleName": "Unity-SpawnerModule",
