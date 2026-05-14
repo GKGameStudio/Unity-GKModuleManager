@@ -40,6 +40,11 @@
         "recommendedPath": "Assets/Plugins/GamiFly/Muse UI"
     },
     {
+        "moduleName": "Zen-UI",
+        "gitUrl": "https://github.com/Unity-Zen-Studio/Zen-UI.git",
+        "recommendedPath": "Assets/Plugins/Zen/Zen UI"
+    },
+    {
         "moduleName": "UIAnimator",
         "gitUrl": "https://github.com/GKGameStudio/UIAnimator",
         "recommendedPath": "Assets/Plugins/GamiFly/UIAnimator"
