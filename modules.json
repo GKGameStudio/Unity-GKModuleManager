@@ -40,7 +40,17 @@
         "recommendedPath": "Assets/Plugins/GamiFly/Muse UI"
     },
     {
-        "moduleName": "Zen-UI",
+        "moduleName": "Zen-Observer",
+        "gitUrl": "https://github.com/Unity-Zen-Studio/Zen-Observer.git",
+        "recommendedPath": "Assets/Plugins/Zen/Zen Observer"
+    },
+    {
+        "moduleName": "Zen-Event",
+        "gitUrl": "https://github.com/Unity-Zen-Studio/Zen-Event.git",
+        "recommendedPath": "Assets/Plugins/Zen/Zen Event"
+    },
+    {
+        "moduleName": "Zen-Observer",
         "gitUrl": "https://github.com/Unity-Zen-Studio/Zen-UI.git",
         "recommendedPath": "Assets/Plugins/Zen/Zen UI"
     },
