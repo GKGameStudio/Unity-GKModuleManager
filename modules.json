@@ -40,6 +40,11 @@
         "recommendedPath": "Assets/Plugins/GamiFly/Muse UI"
     },
     {
+        "moduleName": "Zen-Core",
+        "gitUrl": "https://github.com/Unity-Zen-Studio/Zen-Core.git",
+        "recommendedPath": "Assets/Plugins/Zen/Zen Core"
+    },
+    {
         "moduleName": "Zen-Observer",
         "gitUrl": "https://github.com/Unity-Zen-Studio/Zen-Observer.git",
         "recommendedPath": "Assets/Plugins/Zen/Zen Observer"
